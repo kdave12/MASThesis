@@ -15,7 +15,7 @@ This project contains a notebook with example code for privacy auditing using th
 5. Make sure that this notebook is located in the correct directory inside the wider directory to ensure the correctness of the relative imports and file paths.
 
 ### GReaT Framework Installation
-GReaT framework leverages the power of advanced pretrained Transformer language models to produce high-quality synthetic tabular data. Generate new data samples effortlessly with our user-friendly API in just a few lines of code. Please see our publication for more details: https://github.com/kathrinse/be_great
+GReaT framework leverages the power of advanced pretrained Transformer language models to produce high-quality synthetic tabular data. Generate new data samples effortlessly with user-friendly API in just a few lines of code. Please their publication for more details: https://github.com/kathrinse/be_great
 
 The GReaT framework can be easily installed using with pip - requires a Python version >= 3.9:
 `pip install be-great`
