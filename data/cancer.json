@@ -1,0 +1,165 @@
+[
+    {
+        "name": "ID",
+        "type": "countable/ordered",
+        "representation": "integer"
+    },
+    {
+        "name": "DIAGNOSIS",
+        "type": "finite",
+        "representation": [
+            "M",
+            "B"
+        ]
+    },
+    {
+        "name": "RADIUS1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "TEXTURE1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "PERIMETER1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "AREA1",
+        "type": "real/non-negative",
+        "representation": "number"
+    }, 
+    {
+        "name": "SMOOTHNESS1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "COMPACTNESS1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "CONCAVITY1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "CONCAVE_POINTS1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "SYMMETRY1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "FRACTAL_DIMENSION1",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    { 
+        "name": "RADIUS2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "TEXTURE2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "PERIMETER2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "AREA2",
+        "type": "real/non-negative",
+        "representation": "number"
+    }, 
+    {
+        "name": "SMOOTHNESS2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "COMPACTNESS2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "CONCAVITY2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "CONCAVE_POINTS2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "SYMMETRY2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "FRACTAL_DIMENSION2",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    { 
+        "name": "RADIUS3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "TEXTURE3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "PERIMETER3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "AREA3",
+        "type": "real/non-negative",
+        "representation": "number"
+    }, 
+    {
+        "name": "SMOOTHNESS3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "COMPACTNESS3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "CONCAVITY3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "CONCAVE_POINTS3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "SYMMETRY3",
+        "type": "real/non-negative",
+        "representation": "number"
+    },
+    {
+        "name": "FRACTAL_DIMENSION3",
+        "type": "real/non-negative",
+        "representation": "number"
+    }
+]

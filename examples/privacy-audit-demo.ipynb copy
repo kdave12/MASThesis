@@ -1,0 +1,566 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "a2765ac8",
+   "metadata": {},
+   "source": [
+    "# Preliminaries"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "10036a84",
+   "metadata": {},
+   "source": [
+    "First, make sure the virtual environment is activated inside of the Jupyter notebook so we have access to all the necessary packages. That is, make sure to add the virtual environment to the available kernels for the notebook."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "01fe12e4",
+   "metadata": {},
+   "source": [
+    "Also, make sure this notebook is in the proper directory inside the larger project directory. This is important for some relative imports and file paths later."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0a6546cf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Package                       Version     Editable project location\n",
+      "----------------------------- ----------- ---------------------------------------------------\n",
+      "absl-py                       1.4.0\n",
+      "alabaster                     0.7.12\n",
+      "anyio                         3.6.2\n",
+      "appnope                       0.1.3\n",
+      "argon2-cffi                   21.3.0\n",
+      "argon2-cffi-bindings          21.2.0\n",
+      "asttokens                     2.2.0\n",
+      "astunparse                    1.6.3\n",
+      "attrs                         22.1.0\n",
+      "Babel                         2.10.3\n",
+      "backcall                      0.2.0\n",
+      "beautifulsoup4                4.11.1\n",
+      "bleach                        5.0.1\n",
+      "cachetools                    5.3.1\n",
+      "certifi                       2022.9.24\n",
+      "cffi                          1.15.1\n",
+      "charset-normalizer            2.1.1\n",
+      "cloudpickle                   2.2.0\n",
+      "comm                          0.1.4\n",
+      "contourpy                     1.0.5\n",
+      "ctgan                         0.2.2.dev0\n",
+      "cycler                        0.11.0\n",
+      "DataSynthesizer               0.1.11\n",
+      "debugpy                       1.6.3\n",
+      "decorator                     5.1.1\n",
+      "defusedxml                    0.7.1\n",
+      "disjoint-set                  0.7.4\n",
+      "docutils                      0.17.1\n",
+      "entrypoints                   0.4\n",
+      "executing                     1.2.0\n",
+      "fastjsonschema                2.16.2\n",
+      "flatbuffers                   23.5.26\n",
+      "fonttools                     4.37.4\n",
+      "gast                          0.4.0\n",
+      "google-auth                   2.22.0\n",
+      "google-auth-oauthlib          1.0.0\n",
+      "google-pasta                  0.2.0\n",
+      "grpcio                        1.56.2\n",
+      "h5py                          3.9.0\n",
+      "idna                          3.4\n",
+      "imagesize                     1.4.1\n",
+      "importlib-metadata            5.0.0\n",
+      "iniconfig                     1.1.1\n",
+      "ipykernel                     6.16.0\n",
+      "ipython                       8.7.0\n",
+      "ipython-genutils              0.2.0\n",
+      "ipywidgets                    8.1.0\n",
+      "jedi                          0.18.1\n",
+      "Jinja2                        3.1.2\n",
+      "joblib                        1.2.0\n",
+      "json5                         0.9.10\n",
+      "jsonschema                    4.17.3\n",
+      "jupyter                       1.0.0\n",
+      "jupyter_client                7.4.2\n",
+      "jupyter-console               6.6.3\n",
+      "jupyter_core                  5.3.1\n",
+      "jupyter-server                1.23.3\n",
+      "jupyterlab                    3.5.0\n",
+      "jupyterlab-pygments           0.2.2\n",
+      "jupyterlab_server             2.16.3\n",
+      "jupyterlab-widgets            3.0.8\n",
+      "keras                         2.13.1\n",
+      "kiwisolver                    1.4.4\n",
+      "libclang                      16.0.6\n",
+      "Markdown                      3.4.4\n",
+      "MarkupSafe                    2.1.1\n",
+      "matplotlib                    3.6.1\n",
+      "matplotlib-inline             0.1.6\n",
+      "mistune                       2.0.4\n",
+      "nbclassic                     0.4.8\n",
+      "nbclient                      0.5.13\n",
+      "nbconvert                     7.2.5\n",
+      "nbformat                      5.7.0\n",
+      "nest-asyncio                  1.5.6\n",
+      "networkx                      3.1\n",
+      "nose                          1.3.7\n",
+      "notebook                      6.5.2\n",
+      "notebook_shim                 0.2.2\n",
+      "numpy                         1.23.4\n",
+      "oauthlib                      3.2.2\n",
+      "opt-einsum                    3.3.0\n",
+      "packaging                     21.3\n",
+      "palettable                    3.3.0\n",
+      "pandas                        1.5.0\n",
+      "pandocfilters                 1.5.0\n",
+      "parso                         0.8.3\n",
+      "pexpect                       4.8.0\n",
+      "pickleshare                   0.7.5\n",
+      "Pillow                        9.2.0\n",
+      "pip                           22.1.2\n",
+      "platformdirs                  3.10.0\n",
+      "pluggy                        1.0.0\n",
+      "private-pgm                   0.0.1\n",
+      "prometheus-client             0.15.0\n",
+      "prompt-toolkit                3.0.31\n",
+      "protobuf                      4.24.0\n",
+      "psutil                        5.9.2\n",
+      "ptyprocess                    0.7.0\n",
+      "pure-eval                     0.2.2\n",
+      "py                            1.11.0\n",
+      "py-synthpop                   0.1.2\n",
+      "pyasn1                        0.5.0\n",
+      "pyasn1-modules                0.3.0\n",
+      "pycparser                     2.21\n",
+      "Pygments                      2.13.0\n",
+      "pyparsing                     3.0.9\n",
+      "pyrsistent                    0.19.2\n",
+      "pytest                        7.1.3\n",
+      "python-dateutil               2.8.2\n",
+      "pytz                          2022.4\n",
+      "pyzmq                         24.0.1\n",
+      "qtconsole                     5.4.3\n",
+      "QtPy                          2.3.1\n",
+      "reprosyn                      0.1.0\n",
+      "requests                      2.28.1\n",
+      "requests-oauthlib             1.3.1\n",
+      "rsa                           4.9\n",
+      "scikit-learn                  1.1.2\n",
+      "scipy                         1.9.2\n",
+      "seaborn                       0.11.2\n",
+      "Send2Trash                    1.8.0\n",
+      "setuptools                    65.5.0\n",
+      "setuptools-scm                7.0.5\n",
+      "six                           1.16.0\n",
+      "sklearn                       0.0\n",
+      "sniffio                       1.3.0\n",
+      "snowballstemmer               2.2.0\n",
+      "soupsieve                     2.3.2.post1\n",
+      "Sphinx                        4.5.0\n",
+      "sphinx-rtd-theme              1.0.0\n",
+      "sphinxcontrib-applehelp       1.0.2\n",
+      "sphinxcontrib-devhelp         1.0.2\n",
+      "sphinxcontrib-htmlhelp        2.0.0\n",
+      "sphinxcontrib-jsmath          1.0.1\n",
+      "sphinxcontrib-qthelp          1.0.3\n",
+      "sphinxcontrib-serializinghtml 1.1.5\n",
+      "spyder-kernels                2.2.0\n",
+      "stack-data                    0.6.2\n",
+      "tapas                         1.0.0       /Volumes/Data_Repos/UCLA/Thesis/privacy-sdg-toolbox\n",
+      "tensorboard                   2.13.0\n",
+      "tensorboard-data-server       0.7.1\n",
+      "tensorflow                    2.13.0\n",
+      "tensorflow-estimator          2.13.0\n",
+      "tensorflow-io-gcs-filesystem  0.33.0\n",
+      "termcolor                     2.3.0\n",
+      "terminado                     0.17.0\n",
+      "threadpoolctl                 3.1.0\n",
+      "tinycss2                      1.2.1\n",
+      "tomli                         2.0.1\n",
+      "torch                         1.12.1\n",
+      "torchvision                   0.13.1\n",
+      "tornado                       6.2\n",
+      "tqdm                          4.64.1\n",
+      "traitlets                     5.4.0\n",
+      "typing_extensions             4.4.0\n",
+      "urllib3                       1.26.12\n",
+      "validators                    0.20.0\n",
+      "wcwidth                       0.2.5\n",
+      "webencodings                  0.5.1\n",
+      "websocket-client              1.4.2\n",
+      "Werkzeug                      2.3.6\n",
+      "wheel                         0.37.1\n",
+      "widgetsnbextension            4.0.8\n",
+      "wrapt                         1.15.0\n",
+      "wurlitzer                     3.0.2\n",
+      "zipp                          3.9.0\n",
+      "\n",
+      "\u001b[1m[\u001b[0m\u001b[34;49mnotice\u001b[0m\u001b[1;39;49m]\u001b[0m\u001b[39;49m A new release of pip available: \u001b[0m\u001b[31;49m22.1.2\u001b[0m\u001b[39;49m -> \u001b[0m\u001b[32;49m23.2.1\u001b[0m\n",
+      "\u001b[1m[\u001b[0m\u001b[34;49mnotice\u001b[0m\u001b[1;39;49m]\u001b[0m\u001b[39;49m To update, run: \u001b[0m\u001b[32;49mpip install --upgrade pip\u001b[0m\n"
+     ]
+    }
+   ],
+   "source": [
+    "# See available packages\n",
+    "!pip list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "000af06e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Some additional installations/updates for some packages\n",
+    "!pip install --upgrade pip --quiet\n",
+    "!pip install --upgrade ctgan --quiet\n",
+    "!pip install sdv opacus autodp smartnoise-synth --quiet"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "acad2bbb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/Users/krishnadave/Library/Caches/pypoetry/virtualenvs/tapas-GDPEd_BJ-py3.9/lib/python3.9/site-packages/mbi/__init__.py:15: UserWarning: MixtureInference disabled, please install jax and jaxlib\n",
+      "  warnings.warn('MixtureInference disabled, please install jax and jaxlib')\n"
+     ]
+    },
+    {
+     "ename": "ModuleNotFoundError",
+     "evalue": "No module named 'modules'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[3], line 28\u001b[0m\n\u001b[1;32m     25\u001b[0m \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01mmbi\u001b[39;00m \u001b[38;5;28;01mimport\u001b[39;00m Dataset, Domain\n\u001b[1;32m     27\u001b[0m \u001b[38;5;66;03m# Generators\u001b[39;00m\n\u001b[0;32m---> 28\u001b[0m \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01mmodules\u001b[39;00m\u001b[38;5;21;01m.\u001b[39;00m\u001b[38;5;21;01mmyctgan\u001b[39;00m \u001b[38;5;28;01mimport\u001b[39;00m CTGAN\n\u001b[1;32m     29\u001b[0m \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01mmodules\u001b[39;00m\u001b[38;5;21;01m.\u001b[39;00m\u001b[38;5;21;01mmyctgan\u001b[39;00m \u001b[38;5;28;01mimport\u001b[39;00m DPCTGAN\n\u001b[1;32m     30\u001b[0m \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01mmodules\u001b[39;00m\u001b[38;5;21;01m.\u001b[39;00m\u001b[38;5;21;01mmyctgan\u001b[39;00m \u001b[38;5;28;01mimport\u001b[39;00m PATEGAN\n",
+      "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'modules'"
+     ]
+    }
+   ],
+   "source": [
+    "# Import packages and modules\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import time\n",
+    "import json\n",
+    "import itertools\n",
+    "from sklearn.ensemble import IsolationForest\n",
+    "\n",
+    "# Import specific modules from tapas\n",
+    "import tapas.datasets\n",
+    "import tapas.generators\n",
+    "import tapas.attacks\n",
+    "import tapas.threat_models\n",
+    "import tapas.report\n",
+    "\n",
+    "from tapas.generators import Generator, ReprosynGenerator, Raw\n",
+    "\n",
+    "# Some fancy displays when training/testing.\n",
+    "import tqdm\n",
+    "\n",
+    "# For defining attacks\n",
+    "from sklearn.ensemble import RandomForestClassifier\n",
+    "\n",
+    "# Import modules from AIM\n",
+    "from mbi import Dataset, Domain\n",
+    "\n",
+    "# Generators\n",
+    "from modules.myctgan import CTGAN\n",
+    "from modules.myctgan import DPCTGAN\n",
+    "from modules.myctgan import PATEGAN"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c31a02ca",
+   "metadata": {},
+   "source": [
+    "# Load Data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c1d25a32",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Read in csv data file\n",
+    "df = pd.read_csv(\"../data/texas-big.csv\", index_col=None)[:1000]    # Texas1000 dataset\n",
+    "cols = df.columns\n",
+    "dtype_dict = {\"DISCHARGE\": \"str\", **{col: 'str' for col in cols[1:12]}, **{col: 'float64' for col in cols[12:]}}\n",
+    "df = df.astype(dtype_dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e532d2b9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create TabularDataset object\n",
+    "data = tapas.datasets.TabularDataset(data=df, \n",
+    "                                     description=tapas.datasets.DataDescription(json.load(open(\"../data/texas-big.json\"))))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cd357ab0",
+   "metadata": {},
+   "source": [
+    "# Attack/Audit Procedure"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "95bc8f7b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Choose number of records to target (for each, random and outlier)\n",
+    "num_targets = 5\n",
+    "\n",
+    "# Select random target record indices\n",
+    "random_index = list(np.random.randint(0, 1000, num_targets))\n",
+    "\n",
+    "# Select outlier target record indices\n",
+    "model_isoforest = IsolationForest()\n",
+    "preds = model_isoforest.fit_predict(data.data.iloc[:, 7:])\n",
+    "outlier_index = list(np.random.choice(np.where(preds == -1)[0], num_targets))\n",
+    "\n",
+    "# List of all our target indices\n",
+    "targets = random_index + outlier_index"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1fbaa751",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Helper function to construct attack\n",
+    "def attack(dataset, target_index, generator):\n",
+    "    # Knowledge of the real data - assume auxiliary knowledge of the private dataset - auxiliary data from same distribution\n",
+    "    data_knowledge = tapas.threat_models.AuxiliaryDataKnowledge(dataset,\n",
+    "                        auxiliary_split=0.5, num_training_records=100, )\n",
+    "\n",
+    "    # Knowledge of the generator - typically black-box access\n",
+    "    sdg_knowledge = tapas.threat_models.BlackBoxKnowledge(generator, num_synthetic_records=100, )\n",
+    "\n",
+    "    # Define threat model with attacker goal: membership inference attack on a random record\n",
+    "    threat_model = tapas.threat_models.TargetedMIA(attacker_knowledge_data=data_knowledge,\n",
+    "                        target_record=dataset.get_records([target_index]),\n",
+    "                        attacker_knowledge_generator=sdg_knowledge,\n",
+    "                        generate_pairs=True,\n",
+    "                        replace_target=True,\n",
+    "                        iterator_tracker=tqdm.tqdm)\n",
+    "\n",
+    "    # Initialize an attacker: Groundhog attack with standard parameters\n",
+    "    random_forest = RandomForestClassifier(n_estimators=100)\n",
+    "    feature_set = tapas.attacks.NaiveSetFeature() + tapas.attacks.HistSetFeature() + tapas.attacks.CorrSetFeature()\n",
+    "    feature_classifier = tapas.attacks.FeatureBasedSetClassifier(feature_set, random_forest)\n",
+    "    attacker = tapas.attacks.GroundhogAttack(feature_classifier)\n",
+    "\n",
+    "    # Train the attack\n",
+    "    start = time.time()\n",
+    "    attacker.train(threat_model, num_samples=100)\n",
+    "    end = time.time()\n",
+    "    print(\"time it took to train the attacker: {}\".format(end-start))\n",
+    "\n",
+    "    # Test the attack\n",
+    "    start = time.time()\n",
+    "    summary = threat_model.test(attacker, num_samples=100)\n",
+    "    end = time.time()\n",
+    "    print(\"time it took to test the attacker: {}\".format(end-start))\n",
+    "\n",
+    "    metrics = summary.get_metrics()\n",
+    "    metrics[\"dataset\"] = \"Texas\"\n",
+    "\n",
+    "    # print(\"Results:\\n\", metrics.head())\n",
+    "    return summary, metrics"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a63cc393",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Can try attack with several generators (not all generators work on all datasets)\n",
+    "generators = [Raw(), \n",
+    "              CTGAN(epochs=1), \n",
+    "              #DPCTGAN(epsilon=0.1, batch_size=64, epochs=1), \n",
+    "              #DPCTGAN(epsilon=0.5, batch_size=64, epochs=1),\n",
+    "              DPCTGAN(epsilon=1, batch_size=64, epochs=1)]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "590fb6bd",
+   "metadata": {},
+   "source": [
+    "Caution: auditing multiple generators and many target records can result in a very long computational runtime (this is why the generators are set to epochs=1 with small privacy budgets above, for demonstration purposes). This problem can be exacerbated by changing various parameters of the attack as well, like the num_training_records when defining the data knowledge, num_synthetic_records when defining the generator knowledge, or num_samples when training/testing the attack."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4fae7753",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# To store results of attacks\n",
+    "all_metrics = pd.DataFrame()\n",
+    "all_summaries = []    # for effective epsilon calculation\n",
+    "\n",
+    "# Loop through all generators\n",
+    "for gen in generators: \n",
+    "    # Loop through all target records\n",
+    "    for target in targets:\n",
+    "        try:  \n",
+    "            summ, metr = attack(dataset=data, target_index=target, generator=gen)\n",
+    "            all_summaries.append(summ)\n",
+    "            all_metrics = pd.concat([all_metrics, metr], axis=0, ignore_index=True)\n",
+    "            # print(metr.head())\n",
+    "        except Exception:\n",
+    "            continue"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "27ffcf75",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Now, check metrics and summaries\n",
+    "print(all_metrics)\n",
+    "print(all_summaries)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5b47d6de",
+   "metadata": {},
+   "source": [
+    "# Results and Plots"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9be5e217",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Get indices for only the attacks on random targets\n",
+    "num_attacks = all_metrics.shape[0]\n",
+    "random_indices = [num for i in range(0, num_attacks, num_targets*2) for num in range(i, i+num_targets)]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9a329492",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Compare generators on random targets\n",
+    "report = tapas.report.BinaryLabelAttackReport(all_metrics.iloc[random_indices])\n",
+    "report.metrics = [\"privacy_gain\", \"auc\", \"effective_epsilon\"]\n",
+    "report.compare(comparison_column='generator', fixed_pair_columns=['attack', 'dataset'], marker_column='target_id', filepath=\"../figures/Texas_compare_generators\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ef4179a5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Save eff eps report for DP-CTGAN, as an example (corresponding to the last 10 summaries)\n",
+    "selected_summaries = all_summaries[20:]\n",
+    "tapas.report.EffectiveEpsilonReport(selected_summaries).publish(\"../figures/\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "619cc05f",
+   "metadata": {},
+   "source": [
+    "Computing the effective epsilon takes quite a bit of careful configuration to get appropriate results; typically it requires many attacks to be run, then many attack summaries to be fed into the EffectiveEpsilonReport() function."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "22f3bef9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Compare attack for different target record types: random and outlier\n",
+    "all_metrics['target_type'] = (['Random']*num_targets + ['Outlier']*num_targets) * len(generators)\n",
+    "\n",
+    "report = tapas.report.BinaryLabelAttackReport(all_metrics)\n",
+    "report.metrics = [\"privacy_gain\", \"auc\"]\n",
+    "report.compare(comparison_column='generator', fixed_pair_columns=['attack', 'dataset'], marker_column='target_type', filepath=\"../figures/Texas_random_versus_outlier\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9ee0f3a4",
+   "metadata": {},
+   "source": [
+    "While this notebook just serves as a quick intro to getting things up and running, there are *many* other plots and comparisons you can make using a similar process..."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "00bd074e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
