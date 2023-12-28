@@ -20,7 +20,7 @@ GReaT framework leverages the power of advanced pretrained Transformer language 
 The GReaT framework can be easily installed using with pip - requires a Python version >= 3.9:
 `pip install be-great`
 
-### Debugging Tips/Links
+#### Debugging Tips/Links
 LLM model in the GReaT API has to be run on a GPU, it doesn't work on a Mac CPU. 
 
 Otherwise, you will encounter the following errors: 
@@ -52,11 +52,11 @@ Here are some links that helped me with debugging:
 - https://research.google.com/colaboratory/faq.html#gpu-availability
 
 ### Using OpenAI's GPT4 to generate synthetic data
-### Description
+#### Description
 We can use OpenAI's GPT4 to generate synthetic data from real dataset using the API or chat with a prompt such as this with an attachment of the real dataset:
 "Can you create synthetic data that mimics this real dataset, and output a csv file with that data."
 
-### Useful Links
+#### Useful Links
 - https://github.com/openai/openai-cookbook
 - https://github.com/openai/openai-python
 - https://www.reddit.com/r/OpenAI/comments/161cygf/gpt4_api_access/?rdt=53543
