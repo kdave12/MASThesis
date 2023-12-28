@@ -70,6 +70,6 @@ We can use OpenAI's GPT4 to generate synthetic data from real dataset using the 
 
 ChatGPT4 Example:
 
-<img src="/data/gpt4.png" alt="Alternative text" />
+<img src="/gpt4.png" alt="Alternative text" />
 
 
