@@ -41,14 +41,17 @@ To solve this error, try passing in `fp16=true` in the model definition, increas
 
 Here are some links that helped me with debugging: 
 - https://stackoverflow.com/questions/68166721/pytorch-fails-with-cuda-error-device-side-assert-triggered-on-colab
-https://discuss.pytorch.org/t/cuda-error-device-side-assert-triggered-cuda-kernel-errors-might-be-asynchronously-reported-at-some-other-api-call-so-the-stacktrace-below-might-be-incorrect-for-debugging-consider-passing-cuda-launch-blocking-1/160825/5
+- https://discuss.pytorch.org/t/cuda-error-device-side-assert-triggered-cuda-kernel-errors-might-be-asynchronously-reported-at-some-other-api-call-so-the-stacktrace-below-might-be-incorrect-for-debugging-consider-passing-cuda-launch-blocking-1/160825/5
 - https://github.com/pytorch/pytorch/issues/75534
 - https://stackoverflow.com/questions/70340812/how-to-install-pytorch-with-cuda-support-with-pip-in-visual-studio
 - https://medium.com/@snk.nitin/how-to-solve-cuda-out-of-memory-error-850bb247cfb2
 - https://stackoverflow.com/questions/64589421/packagesnotfounderror-cudatoolkit-11-1-0-when-installing-pytorch
 - https://github.com/pytorch/pytorch/issues/30664
+- https://github.com/kathrinse/be_great/issues/42
+- https://github.com/kathrinse/be_great/issues/40
+- https://research.google.com/colaboratory/faq.html#gpu-availability
 
-### Using OpenAI's GPT4 to generate synthetic data from real data
+### Using OpenAI's GPT4 to generate synthetic data
 ### Description
 We can use OpenAI's GPT4 to generate synthetic data from real dataset using the API or chat with a prompt such as this with an attachment of the real dataset:
 "Can you create synthetic data that mimics this real dataset, and output a csv file with that data."
