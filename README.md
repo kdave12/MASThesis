@@ -20,7 +20,7 @@ GReaT framework leverages the power of advanced pretrained Transformer language 
 The GReaT framework can be easily installed using with pip - requires a Python version >= 3.9:
 `pip install be-great`
 
-Colab Example (Run on a GPU): https://colab.research.google.com/github/kathrinse/be_great/blob/main/examples/GReaT_colab_example.ipynb
+Colab Example (To run on a GPU): https://colab.research.google.com/github/kathrinse/be_great/blob/main/examples/GReaT_colab_example.ipynb
 
 #### Debugging Tips/Links
 LLM model in the GReaT API has to be run on a GPU, it doesn't work on a Mac CPU. 
