@@ -52,7 +52,7 @@ Here are some links that helped me with debugging:
 - https://research.google.com/colaboratory/faq.html#gpu-availability
 
 ### Using OpenAI's GPT4 to generate synthetic data
-#### Description
+
 We can use OpenAI's GPT4 to generate synthetic data from real dataset using the API or chat with a prompt such as this with an attachment of the real dataset:
 "Can you create synthetic data that mimics this real dataset, and output a csv file with that data."
 
@@ -69,6 +69,7 @@ We can use OpenAI's GPT4 to generate synthetic data from real dataset using the 
 - https://platform.openai.com/usage
 
 ChatGPT4 Example:
+
 <img src="../data/gpt4.png" alt="Alternative text" />
 
 
