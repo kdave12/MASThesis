@@ -5,7 +5,7 @@ Privacy Auditing of Synthetic Data Using TAPAS Toolbox
 
 This project repository contains example implementations for privacy auditing using the TAPAS toolbox of synthetic data generated from the Breast Cancer Wisconsin Diagnostic Data (https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic). This toolbox is used for evaluating the privacy of synthetic data using adversarial techniques. The code for the TAPAS toolbox is from: https://github.com/alan-turing-institute/tapas 
 
-Example notebook exemplifying Privacy Attacks, Threat Models and Auditing Metrics on Breast Cancer Synthetic Data using TAPAS: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebook/PrivacyAuditing_SyntheticData_Tapas.ipynb
+Example notebook exemplifying Privacy Attacks, Threat Models and Privacy Auditing Metrics on Breast Cancer Synthetic Data using TAPAS toolbox: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebook/PrivacyAuditing_SyntheticData_Tapas.ipynb
 
 ## Setup Instructions
 
