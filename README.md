@@ -30,6 +30,7 @@ Otherwise, you will encounter the following errors:
 `RuntimeError: CUDA error: device-side assert triggered
 CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
 For debugging consider passing CUDA_LAUNCH_BLOCKING=1`
+`RuntimeError: CUDA out of memory. Tried to allocate 12.50 MiB (GPU 0; 10.92 GiB total capacity; 8.57 MiB already allocated; 9.28 GiB free; 4.68 MiB cached) `
 
 To solve this, run this on Google Colab, navigate to Edit > Notebook settings > select Runtime type to be Python 3 > Hardware accelerator to T4 GPU or paid A100 GPU/V100 GPU.
 
@@ -52,6 +53,7 @@ Here are some links that helped me with debugging:
 - https://github.com/kathrinse/be_great/issues/42
 - https://github.com/kathrinse/be_great/issues/40
 - https://research.google.com/colaboratory/faq.html#gpu-availability
+- https://github.com/pytorch/pytorch/issues/16417
 
 ### Using OpenAI's GPT4 to generate synthetic data
 
