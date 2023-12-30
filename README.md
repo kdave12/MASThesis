@@ -18,7 +18,7 @@ This database is also available through the UW CS ftp server:
 - `ftp ftp.cs.wisc.edu`
 - `cd math-prog/cpo-dataset/machine-learn/WDBC/`
 
-## TAPAS Toolbox and Env - Setup Instructions
+## TAPAS Toolbox and Framework Env - Setup Instructions
 
 ### Poetry Installation
 1. Install poetry (system-wide) from https://python-poetry.org/docs/ 
