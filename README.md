@@ -6,7 +6,7 @@ This  repository contains example implementations of privacy auditing using the 
 
 Here is the example notebook exemplifying Privacy Attacks, training and testing Threat Models and generation of Privacy Auditing metrics and reports for Breast Cancer Synthetic Data using the TAPAS toolbox: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebook/PrivacyAuditing_SyntheticData_Tapas.ipynb
 
-## Dataset
+## Breast Cancer Dataset Info
 
 The real dataset of [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic) is used to generate synthetic data.
 
@@ -15,8 +15,8 @@ For the dataset, the features are computed from a digitized image of a fine need
 Separating plane described above was obtained using Multisurface Method-Tree (MSM-T) [K. P. Bennett, "Decision Tree Construction Via Linear Programming." Proceedings of the 4th Midwest Artificial Intelligence and Cognitive Science Society, pp. 97-101, 1992], a classification method which uses linear programming to construct a decision tree.  Relevant features were selected using an exhaustive search in the space of 1-4 features and 1-3 separating planes. The actual linear program used to obtain the separating plane in the 3-dimensional space is that described in: [K. P. Bennett and O. L. Mangasarian: "Robust Linear Programming Discrimination of Two Linearly Inseparable Sets", Optimization Methods and Software 1, 1992, 23-34].
 
 This database is also available through the UW CS ftp server:
-ftp ftp.cs.wisc.edu
-cd math-prog/cpo-dataset/machine-learn/WDBC/
+- `ftp ftp.cs.wisc.edu`
+- `cd math-prog/cpo-dataset/machine-learn/WDBC/`
 
 ## Setup Instructions
 
