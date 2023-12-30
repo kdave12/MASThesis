@@ -20,9 +20,11 @@ This database is also available through the UW CS ftp server:
 
 ## TAPAS Toolbox and Framework Env - Setup Instructions
 
+To mimic the TAPAS environment exactly, `poetry` is recommended.
+
 ### Poetry Installation
 1. Install poetry (system-wide) from https://python-poetry.org/docs/ 
-2. It can also be installed using pip: `pip install git+https://github.com/alan-turing-institute/privacy-sdg-toolbox`
+2. Can be installed using pip: `pip install git+https://github.com/alan-turing-institute/privacy-sdg-toolbox`
 3. Activate virtual environment inside the Jupyter notebook using `poetry shell`
 4. Add the virtual environment to the available kernels for the notebook.
 5. Make sure that this notebook is located in the correct directory inside the wider directory to ensure the correctness of the relative imports and file paths.
