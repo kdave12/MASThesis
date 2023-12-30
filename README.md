@@ -82,4 +82,8 @@ ChatGPT4 Example:
 
 <img src="/gpt4.png" alt="Alternative text" />
 
+### Mostly.AI's AI-generated synthetic data - Free Trial
 
+Mostly AI (https://mostly.ai) is a synthetic data generator startup that provides AI-powered synthetic data generation for free of charge for up to 100K rows daily.
+
+<img src="/mostlyai.png" alt="Alternative text" />
