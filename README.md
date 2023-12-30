@@ -88,5 +88,11 @@ Mostly AI (https://mostly.ai) is a synthetic data generator startup that provide
 
 Here is the documentation for preparing the data: https://mostly.ai/docs/guides/prepare-data
 
+Other links:
+- https://mostly.ai/synthetic-data-dictionary
+- https://mostly.ai/synthetic-data/what-is-synthetic-data
+- https://mostly.ai/synthetic-data-platform/synthetic-data-generation
+- https://mostly.ai/blog/how-to-generate-synthetic-data
+
 <img src="/mostlyai2.png" alt="Alternative text" />
 <img src="/mostlyai.png" alt="Alternative text" />
