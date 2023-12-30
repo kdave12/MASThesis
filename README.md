@@ -27,6 +27,8 @@ This database is also available through the UW CS ftp server:
 4. Add the virtual environment to the available kernels for the notebook.
 5. Make sure that this notebook is located in the correct directory inside the wider directory to ensure the correctness of the relative imports and file paths.
 
+## Synthetic Data Generators - Setup Instructions
+
 ### GReaT Framework Installation
 GReaT framework leverages the power of advanced pretrained Transformer language models to produce high-quality synthetic tabular data. Generate new data samples with their API in just a few lines of code. Checkout their publication for more details: https://github.com/kathrinse/be_great
 
