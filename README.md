@@ -2,13 +2,13 @@
 ## Krishna Dave (UID: 905636874)
 ## Privacy Auditing of Synthetic Data Using TAPAS Toolbox
 
-This  repository contains example implementations of privacy auditing using the TAPAS toolbox for synthetic data generated from the Breast Cancer Wisconsin Diagnostic Data (https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic). This toolbox is used for evaluating the privacy of synthetic data using adversarial techniques. The code for the TAPAS toolbox is from: https://github.com/alan-turing-institute/tapas ([Associated Paper](https://arxiv.org/abs/2211.06550))
+This  repository contains example implementations of privacy auditing using the TAPAS toolbox for synthetic data generated from [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic). This toolbox is used for evaluating the privacy of synthetic data using adversarial techniques. The code for the TAPAS toolbox is from: https://github.com/alan-turing-institute/tapas ([Associated Paper](https://arxiv.org/abs/2211.06550))
 
 Here is the example notebook exemplifying Privacy Attacks, training and testing Threat Models and generation of Privacy Auditing metrics and reports for Breast Cancer Synthetic Data using the TAPAS toolbox: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebook/PrivacyAuditing_SyntheticData_Tapas.ipynb
 
 ## Breast Cancer Dataset Info
 
-The real dataset of [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic) is used to generate synthetic data.
+The real dataset from [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic) is used to generate synthetic data.
 
 For the dataset, the features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image. A few of the images can be found at http://www.cs.wisc.edu/~street/images/
 
