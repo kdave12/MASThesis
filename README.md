@@ -6,7 +6,7 @@ This  repository contains example implementations of privacy auditing using the 
 
 Here is the example notebook exemplifying Privacy Attacks, training and testing Threat Models and generation of Privacy Auditing metrics and reports for Breast Cancer Synthetic Data using the TAPAS toolbox: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebook/PrivacyAuditing_SyntheticData_Tapas.ipynb
 
-## Breast Cancer Dataset Info
+## Breast Cancer Dataset
 
 The real dataset from [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic) is used to generate synthetic data.
 
