@@ -38,7 +38,7 @@ An open-source Python library called `Edvart` is used to explore datasets and ge
 - Alternatively, the library can be downloaded from: https://github.com/datamole-ai/edvart
 - More info about the library can be found here: https://datamole-ai.github.io/edvart/
 - The notebooks with EDA reports for real and synthetic datasets are found here: https://github.com/kdave12/MASThesis/tree/main/ExampleNotebooks
-- The HTML files with the EDA reports can be found here:
+- The HTML files with the EDA reports can be found here: https://github.com/kdave12/MASThesis/tree/main/html_files
 
 ## TAPAS Toolbox and Framework Env - Setup Instructions
 
