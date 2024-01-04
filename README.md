@@ -27,8 +27,8 @@ Exploratory data analysis (EDA) is conducted on the real dataset and the synthet
 An open-source Python library called `Edvart` is used to explore datasets and generate EDA reports. `Edvart` is available on PyPI and can be installed using `pip` as such: 
 `pip install edvart`
 
-Alternatively, it can be downloaded from: https://github.com/datamole-ai/edvart
-More info about the library is found here: https://datamole-ai.github.io/edvart/
+Alternatively, the library can be downloaded from: https://github.com/datamole-ai/edvart
+More info about the library can be found here: https://datamole-ai.github.io/edvart/
 
 The notebooks with EDA reports for real and synthetic datasets are found here: https://github.com/kdave12/MASThesis/tree/main/ExampleNotebooks
 
