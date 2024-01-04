@@ -36,6 +36,7 @@ An open-source Python library called `Edvart` is used to explore datasets and ge
 `pip install edvart`
 
 Alternatively, the library can be downloaded from: https://github.com/datamole-ai/edvart
+
 More info about the library can be found here: https://datamole-ai.github.io/edvart/
 
 The notebooks with EDA reports for real and synthetic datasets are found here: https://github.com/kdave12/MASThesis/tree/main/ExampleNotebooks
