@@ -11,16 +11,16 @@ Here is the [example notebook](https://github.com/kdave12/MASThesis/blob/main/Ex
 The real dataset from [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic) is used to generate synthetic data.
 
 For the dataset, the features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image. Ten real-valued features computed for each cell nucleus are as follows:
-a) radius (mean of distances from the center to points on the perimeter)
-b) texture (standard deviation of gray-scale values)
-c) perimeter
-d) area
-e) smoothness (local variation in radius lengths)
-f) compactness (perimeter² / area — 1.0)
-g) concavity (severity of concave portions of the contour)
-h) concave points (number of concave portions of the contour)
-i) symmetry
-j) fractal dimension (“coastline approximation” — 1)
+- a) radius (mean of distances from the center to points on the perimeter)
+- b) texture (standard deviation of gray-scale values)
+- c) perimeter
+- d) area
+- e) smoothness (local variation in radius lengths)
+- f) compactness (perimeter² / area — 1.0)
+- g) concavity (severity of concave portions of the contour)
+- h) concave points (number of concave portions of the contour)
+- i) symmetry
+- j) fractal dimension (“coastline approximation” — 1)
 
 This database is also available through the UW CS ftp server:
 - `ftp ftp.cs.wisc.edu`
