@@ -26,7 +26,7 @@ This database is also available through the UW CS ftp server:
 - `ftp ftp.cs.wisc.edu`
 - `cd math-prog/cpo-dataset/machine-learn/WDBC/`
 
-## Exploratory Data Analysis (EDA) of Real and Synthetic Data
+## Exploratory Data Analysis (EDA) on Real and Synthetic Datasets
 
 Breast cancer is a malignant type of cancer and has been life threatening for women around the world. With early detection as a non-metastatic disease, breast cancer is curable. Healthcare datasets such as these are highly confidential, but important for analysis and model training that help with early detection. Therefore, exploring the use cases of synthetic data generation for such a dataset is quite beneficial.
 
