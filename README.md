@@ -111,7 +111,7 @@ We can use OpenAI's GPT4 to generate synthetic data from real dataset using the 
 
 ChatGPT4 Example:
 
-<img src="/gpt4.png" alt="Alternative text" />
+<img src="/images/gpt4.png" alt="Alternative text" />
 
 ### Mostly.AI's AI-generated synthetic data - Free Trial
 
@@ -125,5 +125,5 @@ Other links:
 - https://mostly.ai/synthetic-data-platform/synthetic-data-generation
 - https://mostly.ai/blog/how-to-generate-synthetic-data
 
-<img src="/mostlyai2.png" alt="Alternative text" />
-<img src="/mostlyai.png" alt="Alternative text" />
+<img src="/images/mostlyai2.png" alt="Alternative text" />
+<img src="/images/mostlyai.png" alt="Alternative text" />
