@@ -18,6 +18,14 @@ This database is also available through the UW CS ftp server:
 - `ftp ftp.cs.wisc.edu`
 - `cd math-prog/cpo-dataset/machine-learn/WDBC/`
 
+## Exploratory Data Analysis (EDA) on Real and Synthetic Data
+
+Breast cancer is a malignant type of cancer and has been life threatening for women around the world. With early detection as a non-metastatic disease, breast cancer is curable. Healthcare datasets such as these are highly confidential, but important for analysis and model training that help with early detection. Therefore, exploring the use cases of synthetic data generation for such a dataset is quite beneficial.
+
+Exploratory data analysis (EDA) conducted on the real dataset and the synthetically generated datasets from several sources (including GReaT, OpenAI's GPT4, Mostly.AI) to understand the data quality and data distributions, and compare and contrast between the real dataset and the synthetically generated ones can be found here:
+
+EDA includes checking for data types, data preview, missing values, constant occurences, duplicate rows, univariate analysis, bivariate analysis and multivariate analysis.
+
 ## TAPAS Toolbox and Framework Env - Setup Instructions
 
 To mimic the TAPAS environment exactly, `poetry` is recommended.
