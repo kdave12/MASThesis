@@ -4,7 +4,7 @@
 
 This  repository contains example implementations of privacy auditing using the TAPAS toolbox for synthetic data generated from [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic). This toolbox is used for evaluating the privacy of synthetic data using adversarial techniques. The code for the TAPAS toolbox is from: https://github.com/alan-turing-institute/tapas ([Associated Paper](https://arxiv.org/abs/2211.06550))
 
-Here is the example notebook exemplifying Privacy Attacks, training and testing Threat Models and generation of Privacy Auditing metrics and reports for Breast Cancer Synthetic Data using the TAPAS toolbox: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebook/PrivacyAuditing_SyntheticData_Tapas.ipynb
+Here is the example notebook exemplifying Privacy Attacks, training and testing Threat Models and generation of Privacy Auditing metrics and reports for Breast Cancer Synthetic Data using the TAPAS toolbox: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebooks/PrivacyAuditing_SyntheticData_Tapas.ipynb
 
 ## Breast Cancer Dataset
 
@@ -30,7 +30,7 @@ An open-source Python library called `Edvart` is used to explore datasets and ge
 Alternatively, it can be downloaded from: https://github.com/datamole-ai/edvart
 More info about the library is found here: https://datamole-ai.github.io/edvart/
 
-The notebooks with EDA reports for real and synthetic datasets are found here: 
+The notebooks with EDA reports for real and synthetic datasets are found here: https://github.com/kdave12/MASThesis/tree/main/ExampleNotebooks
 
 ## TAPAS Toolbox and Framework Env - Setup Instructions
 
@@ -51,7 +51,7 @@ GReaT framework leverages the power of advanced pretrained Transformer language 
 The GReaT framework can be easily installed using with pip - requires a Python version >= 3.9:
 `pip install be-great`
 
-Example Notebook: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebook/BreastCancerBeGreatSyntheticData.ipynb
+Example Notebook: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebooks/BreastCancer_BeGreat_SyntheticDataGeneration.ipynb
 
 Colab Example (To run on a GPU): https://colab.research.google.com/github/kathrinse/be_great/blob/main/examples/GReaT_colab_example.ipynb
 
