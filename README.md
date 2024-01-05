@@ -56,10 +56,10 @@ To mimic the TAPAS environment exactly, `poetry` is recommended.
 ### GReaT Framework Installation
 GReaT framework leverages the power of advanced pretrained Transformer language models to produce high-quality synthetic tabular data. Generate new data samples with their API in just a few lines of code. Checkout their publication for more details: https://github.com/kathrinse/be_great
 
-The GReaT framework can be easily installed using with pip - requires a Python version >= 3.9:
+The GReaT framework can be installed using pip - requires a Python version >= 3.9:
 `pip install be-great`
 
-Example Notebook for synthetic data generation using BeGReaT framework: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebooks/BreastCancer_BeGreat_SyntheticDataGeneration.ipynb
+Example Notebook for synthetic data generation using the BeGReaT framework: https://github.com/kdave12/MASThesis/blob/main/ExampleNotebooks/BreastCancer_BeGreat_SyntheticDataGeneration.ipynb
 
 Colab Example (To run on a GPU): https://colab.research.google.com/github/kathrinse/be_great/blob/main/examples/GReaT_colab_example.ipynb
 
