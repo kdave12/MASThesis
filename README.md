@@ -1,6 +1,6 @@
 # MAS Thesis Notebook
 ## Krishna Dave (UID: 905636874)
-## Privacy Auditing of Synthetically Generated Data produced by Large Language Models using the TAPAS Toolbox
+## Adversarial Privacy Auditing of Synthetically Generated Data produced by Large Language Models using the TAPAS Toolbox
 
 This  repository contains example implementations of privacy auditing using the TAPAS toolbox for synthetic data generated from [The Breast Cancer Wisconsin Diagnostic Data](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic). This toolbox is used for evaluating the privacy of synthetic data using adversarial techniques. The code for the TAPAS toolbox is from: https://github.com/alan-turing-institute/tapas ([Associated Paper](https://arxiv.org/abs/2211.06550))
 
