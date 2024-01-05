@@ -66,7 +66,7 @@ Colab Example (To run on a GPU): https://colab.research.google.com/github/kathri
 #### Debugging Tips/Links
 LLM model in the GReaT API has to be run on a GPU, it doesn't work on a Mac CPU. 
 
-Otherwise, you will encounter the following errors: 
+Otherwise, will encounter the following errors: 
 `RuntimeError: CUDA Out of memory` 
 `RuntimeError: CUDA error: device-side assert triggered
 CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
