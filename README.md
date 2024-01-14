@@ -1,4 +1,4 @@
-# MAS Thesis Notebook
+# MASDS Thesis Notebook
 ## Krishna Dave (UID: 905636874)
 ## Adversarial Privacy Auditing of Synthetically Generated Data produced by Large Language Models using the TAPAS Toolbox
 
