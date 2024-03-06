@@ -42,6 +42,8 @@ An open-source Python library called `Edvart` is used to explore datasets and ge
 
 ## TAPAS Toolbox and Framework Env - Setup Instructions
 
+TAPAS: a Toolbox for Adversarial Privacy Auditing of Synthetic Data ([Paper](https://arxiv.org/abs/2211.06550), [Repository](https://github.com/alan-turing-institute/tapas))
+
 To mimic the TAPAS environment exactly, `poetry` is recommended.
 
 ### Poetry Installation
